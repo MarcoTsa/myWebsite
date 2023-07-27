@@ -110,7 +110,7 @@ const usefull_product = [
     id: 1,
     image: "images/site-images/InternetSpeedTest.png",
     title: "Internet Speed Test",
-    site: "InternetSpeedTest/index.html",
+    site: "InternetSpeedtest/index.html",
   },
   {
     id: 2,
