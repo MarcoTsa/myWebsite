@@ -1,29 +1,66 @@
-const menuBtn = document.querySelector(".menu-icon span");
-const searchBtn = document.querySelector(".search-icon");
-const cancelBtn = document.querySelector(".cancel-icon");
-const items = document.querySelector(".nav-items");
-const form = document.querySelector("form");
-menuBtn.onclick = () => {
-  items.classList.add("active");
-  menuBtn.classList.add("hide");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-};
-cancelBtn.onclick = () => {
-  items.classList.remove("active");
-  menuBtn.classList.remove("hide");
-  searchBtn.classList.remove("hide");
-  cancelBtn.classList.remove("show");
-  form.classList.remove("active");
-  cancelBtn.style.color = "#ff3d00";
-};
-searchBtn.onclick = () => {
-  form.classList.add("active");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-};
+const sideLinks = document.querySelectorAll(
+  ".sidebar .side-menu li a:not(.logout)"
+);
 
-// Game Websites
+sideLinks.forEach((item) => {
+  const li = item.parentElement;
+  item.addEventListener("click", () => {
+    sideLinks.forEach((i) => {
+      i.parentElement.classList.remove("active");
+    });
+    li.classList.add("active");
+  });
+});
+
+const menuBar = document.querySelector(".content nav .bx.bx-menu");
+const sideBar = document.querySelector(".sidebar");
+
+menuBar.addEventListener("click", () => {
+  sideBar.classList.toggle("close");
+});
+
+const searchBtn = document.querySelector(
+  ".content nav form .form-input button"
+);
+const searchBtnIcon = document.querySelector(
+  ".content nav form .form-input button .bx"
+);
+const searchForm = document.querySelector(".content nav form");
+
+searchBtn.addEventListener("click", function (e) {
+  if (window.innerWidth < 576) {
+    e.preventDefault;
+    searchForm.classList.toggle("show");
+    if (searchForm.classList.contains("show")) {
+      searchBtnIcon.classList.replace("bx-search", "bx-x");
+    } else {
+      searchBtnIcon.classList.replace("bx-x", "bx-search");
+    }
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 768) {
+    sideBar.classList.add("close");
+  } else {
+    sideBar.classList.remove("close");
+  }
+  if (window.innerWidth > 576) {
+    searchBtnIcon.classList.replace("bx-x", "bx-search");
+    searchForm.classList.remove("show");
+  }
+});
+
+const toggler = document.getElementById("theme-toggle");
+
+toggler.addEventListener("change", function () {
+  if (this.checked) {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+});
+
 const games_product = [
   {
     id: 0,
@@ -33,39 +70,39 @@ const games_product = [
   },
   {
     id: 1,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/snake.png",
+    title: "Snake",
+    site: "SnakeGame/index.html",
   },
   {
     id: 2,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/snake.png",
+    title: "Snake",
+    site: "SnakeGame/index.html",
   },
   {
     id: 3,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/snake.png",
+    title: "Snake",
+    site: "SnakeGame/index.html",
   },
   {
     id: 4,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/snake.png",
+    title: "Snake",
+    site: "SnakeGame/index.html",
   },
   {
     id: 5,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/snake.png",
+    title: "Snake",
+    site: "SnakeGame/index.html",
   },
   {
     id: 6,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/snake.png",
+    title: "Snake",
+    site: "SnakeGame/index.html",
   },
 ];
 
@@ -87,9 +124,9 @@ const displayItem_games = (item2) => {
         </div>
         <div class"bottom">
           <p class="name">${title}</p>
-          <h3>
-            <a href=${site}>Go to Site</a>
-          </h3>
+          <h4 class"go-to">
+            <a class="go-to-site" href=${site}>Go to Site</a>
+          </h4>
         </div>
       </div>`;
     })
@@ -110,7 +147,7 @@ const usefull_product = [
     id: 1,
     image: "images/site-images/InternetSpeedTest.png",
     title: "Internet Speed Test",
-    site: "InternetSpeedtest/index.html",
+    site: "InternetSpeedTest/index.html",
   },
   {
     id: 2,
@@ -168,9 +205,9 @@ const displayItem_usefull = (item2) => {
         </div>
         <div class"bottom">
           <p class="name">${title}</p>
-          <h3>
-            <a href=${site}>Go to Site</a>
-          </h3>
+          <h4 class"go-to">
+            <a class="go-to-site" href=${site}>Go to Site</a>
+          </h4>
         </div>
       </div>`;
     })
@@ -255,9 +292,9 @@ const displayItem_random = (item2) => {
         </div>
         <div class"bottom">
           <p class="name">${title}</p>
-          <h3>
-            <a href=${site}>Go to Site</a>
-          </h3>
+          <h4 class"go-to">
+            <a class="go-to-site" href=${site} style="">Go to Site</a>
+          </h4>
         </div>
       </div>`;
     })
