@@ -1,62 +1,90 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Web Projekte</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="icon" href="images/Logo.jpg" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Marco Tsapanos`s Website</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="menu-icon">
-                <span class="fas fa-bars"></span>
-            </div>
-            <div class="logo">
-                <a href="#"><img src="images/Logo.jpg"></a>
-                <div class="logo-name"><a href="#"><span>M</span>Tsapanos</a></div>
-            </div>
-            <div class="nav-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#game-websites">Games</a></li>
-                <li><a href="#usefull-websites">Usefull</a></li>
-                <li><a href="#random-websites">Random</a></li>
-            </div>
-            <div class="search-icon">
-                <span class="fas fa-search"></span>
-            </div>
-            <div class="cancel-icon">
-                <span class="fas fa-times"></span>
-            </div>
-            <form action="#" class="searchbar">
-                <input type="search" class="search-data" id="searchbar" placeholder="Funktioniert nicht" required>
-                <button type="submit" class="fas fa-search"></button>
-            </form>
-        </nav>
-    </header>
-    <div class="content">
-        <header>
-            <h1>Web-Projekte</h1>
-            <h2>by Marco Tsapanos</h2>
-        </header>
-        <div class="games-wrapper" id="game-websites">
-            <h2>Games</h2>
-            <div id="games"></div>
-        </div>
-
-        <div class="usefull-wrapper" id="usefull-websites">
-            <h2>Usefull</h2>
-            <div id="usefull"></div>
-        </div>
-        <div class="random-wrapper" id="random-websites">
-            <h2>Random</h2>
-            <div id="random"></div>
-        </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class="bx bx-code-block"></i>
+            <div class="logo-name"><span>M</span>Tsapanos</div>
+        </a>
+        <ul class="side-menu">
+            <li class="active"><a href="#"><i class="bx bxs-home"></i>Home</a></li>
+            <li><a href="#"><i class="bx bxs-joystick"></i>Games</a></li>
+            <li><a href="#"><i class="bx bxs-like"></i>Usefull</a></li>
+            <li><a href="#"><i class="bx bx-accessibility"></i>Random</a></li>
+        </ul>
     </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class="bx bx-menu"></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Funktioniert noch nicht...">
+                    <button class="search-btn" type="submit">
+                        <i class="bx bx-search-alt-2"></i>
+                    </button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="profile">
+                <img src="images/Logo.jpg">
+            </a>
+        </nav>
+        <!-- End of Navbar -->
+
+        <!-- Main Content -->
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Web-Projekte</h1>
+                    <h2>by Marco Tsapanos</h2>
+                </div>
+            </div>
+            <div class="bottom-data">
+
+                <div class="games-wrapper">
+                    <div class="header">
+                        <i class="bx bxs-joystick"></i>
+                        <h3>Games</h3>
+                    </div>
+                    <div id="games"></div>
+                </div>
+
+                <div class="usefull-wrapper">
+                    <div class="header">
+                        <i class="bx bxs-like"></i>
+                        <h3>Usefull</h3>
+                    </div>
+                    <div id="usefull"></div>
+                </div>
+                <div class="random-wrapper">
+                    <div class="header">
+                        <i class="bx bx-accessibility"></i>
+                        <h3>Random</h3>
+                    </div>
+                    <div id="random"></div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
     <script src="index.js"></script>
 </body>
 
