@@ -86,6 +86,7 @@ body {
 }
 
 .sidebar .logo .logo-name span {
+  margin-left: -1px;
   color: var(--dark);
 }
 
@@ -209,6 +210,7 @@ body {
 }
 
 .content nav .bx.bx-menu {
+  margin-left: 10px;
   cursor: pointer;
   color: var(--dark);
 }
@@ -432,8 +434,16 @@ h4 a {
     width: 200px;
   }
 
+  .sidebar .logo {
+    margin-left: -2px;
+  }
+
+  .sidebar.close .logo .logo-name {
+    margin-left: 2px;
+  }
+
   .sidebar .side-menu {
-    margin-top: 385%;
+    margin-top: 115%;
   }
 
   .content {
