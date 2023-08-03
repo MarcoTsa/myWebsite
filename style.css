@@ -2,7 +2,7 @@
 
 :root {
   --light: #f6f6f9;
-  --primary: #1976d2;
+  --primary: rgb(103, 182, 240);
   --light-primary: #cfe8ff;
   --grey: #eee;
   --dark-grey: #aaaaaa;
@@ -389,11 +389,21 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .images {
   max-height: 90%;
   max-width: 90%;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
+}
+
+.img-box img {
+  transition: 0.2s linear;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
 }
 
 .bottom {
