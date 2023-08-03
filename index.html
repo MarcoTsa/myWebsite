@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Logo.jpg" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Marco Tsapanos`s Website</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class="bx bx-code-block"></i>
+            <div class="logo-name"><span>M</span>Tsapanos</div>
+        </a>
+        <ul class="side-menu">
+            <li class="active"><a href="#"><i class="bx bxs-home"></i>Home</a></li>
+            <li><a href="#"><i class="bx bxs-joystick"></i>Games</a></li>
+            <li><a href="#"><i class="bx bxs-like"></i>Usefull</a></li>
+            <li><a href="#"><i class="bx bx-accessibility"></i>Random</a></li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class="bx bx-menu"></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Funktioniert noch nicht...">
+                    <button class="search-btn" type="submit">
+                        <i class="bx bx-search-alt-2"></i>
+                    </button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="profile">
+                <img src="images/Logo.jpg">
+            </a>
+        </nav>
+        <!-- End of Navbar -->
+
+        <!-- Main Content -->
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Web-Projekte</h1>
+                    <h2>by Marco Tsapanos</h2>
+                </div>
+            </div>
+            <div class="bottom-data">
+
+                <div class="games-wrapper">
+                    <div class="header">
+                        <i class="bx bxs-joystick"></i>
+                        <h3>Games</h3>
+                    </div>
+                    <div id="games"></div>
+                </div>
+
+                <div class="usefull-wrapper">
+                    <div class="header">
+                        <i class="bx bxs-like"></i>
+                        <h3>Usefull</h3>
+                    </div>
+                    <div id="usefull"></div>
+                </div>
+                <div class="random-wrapper">
+                    <div class="header">
+                        <i class="bx bx-accessibility"></i>
+                        <h3>Random</h3>
+                    </div>
+                    <div id="random"></div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
