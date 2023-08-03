@@ -70,9 +70,9 @@ const games_product = [
   },
   {
     id: 1,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/PingPong.png",
+    title: "Impossible PingPong",
+    site: "PingPongGame/index.html",
   },
   {
     id: 2,
@@ -120,7 +120,7 @@ const displayItem_games = (item2) => {
       var { image, title, site } = item;
       return `<div class="box">
         <div class="img-box">
-          <img class="images" src=${image}></img>
+          <img class="images" src=${image} loading="lazy"></img>
         </div>
         <div class"bottom">
           <p class="name">${title}</p>
@@ -201,7 +201,7 @@ const displayItem_usefull = (item2) => {
       var { image, title, site } = item;
       return `<div class="box">
         <div class="img-box">
-          <img class="images" src=${image}></img>
+          <img class="images" src=${image} loading="lazy"></img>
         </div>
         <div class"bottom">
           <p class="name">${title}</p>
@@ -232,21 +232,21 @@ const random_product = [
   },
   {
     id: 2,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/FilmApp.png",
+    title: "Movie-Site mit API",
+    site: "FilmApp/index.html",
   },
   {
     id: 3,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/SadowGenerator.png",
+    title: "Schatten Generator",
+    site: "SchattenGenerator/index.html",
   },
   {
     id: 4,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/Donut.png",
+    title: "Rotating Donut",
+    site: "RotatingDonut/index.html",
   },
   {
     id: 5,
@@ -288,7 +288,7 @@ const displayItem_random = (item2) => {
       var { image, title, site } = item;
       return `<div class="box">
         <div class="img-box">
-          <img class="images" src=${image}></img>
+          <img class="images" src=${image} loading="lazy"></img>
         </div>
         <div class"bottom">
           <p class="name">${title}</p>
