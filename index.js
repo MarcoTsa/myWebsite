@@ -76,9 +76,9 @@ const games_product = [
   },
   {
     id: 2,
-    image: "images/work_in_progress.jpeg",
-    title: "Platzhalter",
-    site: "#",
+    image: "images/site-images/XOGame.png",
+    title: "XO Game",
+    site: "XOGame/index.html",
   },
   {
     id: 3,
