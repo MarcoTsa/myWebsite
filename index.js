@@ -71,7 +71,7 @@ const games_product = [
   {
     id: 1,
     image: "images/site-images/PingPong.png",
-    title: "Impossible PingPong",
+    title: "Possible PingPong",
     site: "PingPongGame/index.html",
   },
   {
